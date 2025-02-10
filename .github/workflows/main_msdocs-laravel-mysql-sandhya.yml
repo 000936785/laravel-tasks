@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - msdocs-laravel-mysql-Sandhya
+name: Build and deploy PHP app to Azure Web App - msdocs-laravel-mysql-sandhya
 
 on:
   push:
@@ -64,15 +64,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_BD60AE9EEB6C4268BF2A4D04AE135A87 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8E8B12D88402418086D3503C94334BD1 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_96B2C20119E04076B6A9CA371AEDDB86 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_AA5CF2F83D7242B785C941EC6C8546A6 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FF10D9A99AE048DBB177C21DE68D2925 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_548F7CEBB42D4426993C39684B3B73ED }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'msdocs-laravel-mysql-Sandhya'
+          app-name: 'msdocs-laravel-mysql-sandhya'
           slot-name: 'Production'
           package: .
           
